@@ -1,5 +1,7 @@
 import com.sun.corba.se.impl.orb.ParserTable;
 import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import static org.junit.Assert.assertTrue;
 
@@ -21,5 +23,13 @@ public class MultiplierTests {
     public void test2x2IsNot3() {
     	Multiplier multiplier = new Multiplier();
     	assertTrue(multiplier.multiply(1, 3) == 3);
+    }
+
+    @Test
+    public void webdriver() {
+    	WebDriver driver = new FirefoxDriver();
+    	driver.get("http:www.google.com/");
+    	assertTrue(driver.getTitle().equals("Google"));
+    	driver.quit();
     }
 }
