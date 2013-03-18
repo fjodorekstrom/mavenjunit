@@ -16,4 +16,10 @@ public class MultiplierTests {
         Multiplier multiplier = new Multiplier();
         assertTrue(multiplier.multiply(2, 2) == 4);
     }
+
+    @Test
+    public void test2x2IsNot3() {
+    	Multiplier multiplier = new Multiplier();
+    	assertTrue(multiplier.multiply(1, 3) == 3);
+    }
 }
